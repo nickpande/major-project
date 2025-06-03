@@ -4,12 +4,15 @@ import TopNav from './template/TopNav'
 import axios from '../utils/axios';
 import Headers from './template/Headers';
 import HorizontalCards from './template/HorizontalCards';
+import DropDown from '../components/template/DropDown'
+import Loader from '../components/Loading'
 
 
 function Home() {
   document.title  = "NPDB | HOMEPAGE";
    const [wallpaper, setWallpaper] = useState(null);
    const[Trending , setTrending] = useState(null);
+   const[category , setCategory] = useState("all");
 
 
 
@@ -27,7 +30,7 @@ function Home() {
 
 const getTrending = async () => {
   try {
-    const res = await axios.get(`/trending/all/day`);
+    const res = await axios.get(`/trending/${category}/day`);
     const results = res.data?.results || [];
     setTrending(results);
     console.log("Trending:", results);
@@ -39,9 +42,9 @@ const getTrending = async () => {
 
 
  useEffect(() => {
+  getTrending();
   if (!wallpaper) getHeaderWallpaper();
-  if (!Trending) getTrending();
-}, []);
+}, [category]);
 
 
 
@@ -51,11 +54,15 @@ const getTrending = async () => {
     <div className='w-[80%] h-full overflow-auto overflow-x-hidden '>
     <TopNav />
     <Headers  data={wallpaper}/>
+      <div className=' flex justify-between p-5'>
+        <h1 className=' text-zinc-400 text-3xl font-semibold '>Trending </h1>
+        <DropDown title="filter" options={["tv", "movie", "all"]} func={(e)=>setCategory(e.target.value)} />
+        </div>
     <HorizontalCards data = {Trending} />
     </div>
     </>
   ) : (
-    <h1>loading</h1>
+    <Loader />
   )
 }
 

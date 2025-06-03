@@ -16,48 +16,56 @@
   background-color: #6556cd;
   border-radius: 10px;
 }
-
 .select {
+  position: relative;
+  width: 200px; /* ⬅️ Increased width */
+  background: #272720;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+
+
+/* Style the <select> element */
+.select select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  -ms-appearance: none;
   appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
+  border: none;
   background: #272720;
-  background-image: none;
-  flex: 1;
-  padding: 0 0.5em;
   color: #fff;
-  cursor: pointer;
   font-size: 1em;
   font-family: "Open Sans", sans-serif;
-  position: relative;
-  display: flex;
-  width: 20em;
-  height: 3em;
-  line-height: 3;
-  overflow: hidden;
-  border-radius: 0.25em;
-}
-
-.select::-ms-expand {
-  display: none;
-}
-
-.select::after {
-  content: "125BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  background: #272720;
+  padding: 0.5em 2.5em 0.5em 1em;
   cursor: pointer;
-  pointer-events: none;
-  transition: 0.25s all ease;
+  width: 100%;
+  outline: none;
+  transition: color 0.3s ease;
 }
 
+/* When select is focused (clicked), make text white */
+.select select:focus {
+  color: white;
+}
+
+/* Remove arrow in IE */
+.select select::-ms-expand {
+  display: none;
+  
+}
+
+/* Custom dropdown arrow */
+.select::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  color: #fff;
+  pointer-events: none;
+  transition: 0.25s;
+}
+
+/* Hover effect on arrow */
 .select:hover::after {
   color: #6556cd;
 }
