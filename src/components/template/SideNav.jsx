@@ -16,10 +16,10 @@ function SideNav() {
         <Link to="/trending" className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
         <i className=" mr-2 ri-fire-fill"></i>  Trending
         </Link>
-        <Link className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
-        <i className="mr-2 ri-bard-fill"></i>   Trending Series 
+        <Link to="/popular" className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
+        <i className="mr-2 ri-bard-fill"></i>   Popular 
         </Link>
-        <Link className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
+        <Link to="/movies" className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
         <i className=" mr-2 ri-movie-2-fill"></i>  Movies 
         </Link>
         <Link className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
