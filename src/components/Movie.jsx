@@ -59,7 +59,7 @@ function Movie() {
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter') navigate(-1); }}
           ></i>
-          <span>Movie</span>
+          Movie <small className=' ml-2 text-sm text-zinc-600'> ({category})</small>
         </div>
 
         <div className="flex-1 min-w-[200px] mx-4">

@@ -22,10 +22,10 @@ function SideNav() {
         <Link to="/movies" className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
         <i className=" mr-2 ri-movie-2-fill"></i>  Movies 
         </Link>
-        <Link className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
-        <i className="mr-2 ri-slideshow-3-fill"></i> series 
+        <Link to="/tvshows" className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
+        <i className="mr-2 ri-slideshow-3-fill"></i>  TvShows
         </Link>
-        <Link className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
+        <Link to="/person" className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
         <i className="mr-2 ri-user-line"></i> People
         </Link>
         
@@ -35,10 +35,10 @@ function SideNav() {
         <h1 className='text-white font-semibold text-xl mt-10 mb-5  '>
             WebSite Information
         </h1>
-        <Link className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
+        <Link to='/portfolio' className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
         <i className="mr-2 ri-information-line"></i>  About 
         </Link>
-        <Link className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
+        <Link to="/contact" className="hover:bg-[#6565CD] rounded-lg duration-300  hover:text-white  p-3">
         <i className="mr-2 ri-phone-fill"></i>   Contact 
         </Link>
         
