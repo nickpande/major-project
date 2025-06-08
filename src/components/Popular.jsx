@@ -46,7 +46,7 @@ function Popular() {
 
   return popular.length > 0 ? (
     <div className="px-[3%] w-full overflow-hidden overflow-y-auto">
-      <div className="w-full px-[5%] flex items-center justify-between h-[10vh] space-x-4 overflow-x-auto">
+<div className="w-full  px-[5%] flex items-center justify-between  space-x-4">
         <div className="flex items-center text-2xl text-zinc-400 font-semibold space-x-2 whitespace-nowrap">
           <i
             onClick={() => navigate(-1)}
@@ -56,12 +56,9 @@ function Popular() {
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter') navigate(-1); }}
           ></i>
-          <span>Popular</span>
+          <span className='mr-2'>Trending</span>
         </div>
-
-        <div className="flex-1 min-w-[200px] mx-4">
           <TopNav />
-        </div>
 
         <div className="flex items-center space-x-4 whitespace-nowrap">
           <DropDown title="Category" options={["movie", "tv", ]} func={(e) => setCategory(e.target.value)} />

@@ -33,7 +33,6 @@ const getTrending = async () => {
     const res = await axios.get(`/trending/${category}/day`);
     const results = res.data?.results || [];
     setTrending(results);
-    console.log("Trending:", results);
   } catch (error) {
     console.log(error);
   }
