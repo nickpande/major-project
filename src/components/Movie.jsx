@@ -79,7 +79,7 @@ function Movie() {
         endMessage={<p style={{ textAlign: 'center', margin: '16px 0' }}>No more results</p>}
         scrollableTarget={null}
       >
-        <Cards data={Movies} title={category} />
+        <Cards data={Movies} title="movie" />
       </InfiniteScroll>
     </div>
   ) : (

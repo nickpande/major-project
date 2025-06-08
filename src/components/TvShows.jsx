@@ -77,7 +77,7 @@ const TvShows = () => {
         endMessage={<p style={{ textAlign: 'center', margin: '16px 0' }}>No more results</p>}
         scrollableTarget={null}
       >
-        <Cards data={tv} title={category} />
+        <Cards data={tv} title="tv" />
       </InfiniteScroll>
     </div>
   ) : (

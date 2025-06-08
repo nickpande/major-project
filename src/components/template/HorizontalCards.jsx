@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 function HorizontalCards({data }) {
   return (
         <div className='w-[100%] flex h-[45vh] overflow-y-hidden  p-5 '>
             {
                 data.map((item, index) =>(
-                    <div key={index} className='min-w-[15%]  mr-5 mb-5 bg-zinc-900  overflow-y-hidden '>
+                    <Link to={`${item.media_type}/details/${item.id}}`} key={index} className='min-w-[15%]  mr-5 mb-5 bg-zinc-900  overflow-y-hidden '>
                         <img className='w-full h-[45%]  object-cover ' src={`https://image.tmdb.org/t/p/original/${item.poster_path || item.profile_path})`} alt="" />
 
 
@@ -16,7 +16,7 @@ function HorizontalCards({data }) {
                         
 
                         
-                    </div>
+                    </Link>
                 ))
             }
 

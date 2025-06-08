@@ -87,7 +87,7 @@ const People = () => {
         endMessage={<p style={{ textAlign: 'center', margin: '16px 0' }}>No more results</p>}
         scrollableTarget={null}
       >
-        <Cards data={Person} title={category} />
+        <Cards data={Person} title="person" />
       </InfiniteScroll>
     </div>
   ) : (
