@@ -80,7 +80,7 @@ function Trending() {
         
 
         <div className="flex items-center space-x-4 whitespace-nowrap">
-          <DropDown title="Category" options={["movie", "tv", "all"]} func={(e) => setCategory(e.target.value)} />
+          <DropDown title="Category" options={["movie", "tvshows", "all"]} func={(e) => setCategory(e.target.value)} />
           <DropDown title="Timeframe" options={["week", "day"]} func={(e) => setDuration(e.target.value)} />
         </div>
       </div>
