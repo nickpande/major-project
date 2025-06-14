@@ -60,7 +60,7 @@ const TvShows = () => {
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter') navigate(-1); }}
           ></i>
-          <span className='mr-2'>Trending</span>
+          <span className='mr-2'>TvShows</span>
         </div>
           <TopNav />
 
