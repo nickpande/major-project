@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Loading from '../components/Loading';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
-import { asyncloadmovie } from '../store/actions/movieAction';
+import { asyncloadmovie, removemovie } from '../store/actions/movieAction';
 import HorizontalCards from '../components/template/HorizontalCards'
 
 const MovieDetails = () => {
@@ -15,6 +15,9 @@ const MovieDetails = () => {
 
   useEffect(() => {
     dispatch(asyncloadmovie(id));
+    return() =>{
+      dispatch(removemovie());
+    }
   }, [dispatch, id]);
 
   return info ? (

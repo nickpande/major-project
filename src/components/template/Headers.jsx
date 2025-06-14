@@ -16,7 +16,7 @@ function Headers({data}) {
             <i className=" text-yellow-500 ri-mic-line"></i>{data.release_date  || "no information" }  <i className= "  ml-5 text-yellow-500 ri-album-line"></i> 
             {data.media_type.toUpperCase()}
         </p>
-        <Link className='p-4 rounded text-white  mt-5 bg-[#6565CD]'>
+        <Link to={`/${data.media_type}/details/${data.id}/trailer`} className='p-4 rounded text-white  mt-5 bg-[#6565CD]'>
         watch trailer</Link>
     </div>
   )

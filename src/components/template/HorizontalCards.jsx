@@ -15,7 +15,11 @@ function HorizontalCards({ data }) {
         >
           <img
             className='w-full h-[45%] object-cover'
-            src={`https://image.tmdb.org/t/p/original/${item.poster_path || item.profile_path}`}
+            src={
+              item.poster_path || item.profile_path ?
+              `https://image.tmdb.org/t/p/original/${item.poster_path || item.profile_path}`
+              : noImage
+            }
             alt=""
           />
           <div className='text-white mt-1 p-3 h-[45%] overflow-y-auto' >
