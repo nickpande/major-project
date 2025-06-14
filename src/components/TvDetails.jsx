@@ -180,7 +180,7 @@ return info ? (
       {info.detail.seasons.length > 0 ?
       info.detail.seasons.map((data , i)=>(
            <div className='w-[15vh] mr-[2%]'>
-            <img key={i} className='min-w-[22vh] h-[30vh] object-cover ' src={`https://image.tmdb.org/t/p/original/${ data.poster_path || info.detail.season.backdrop_path ||info.detail.season.profile_path }`} alt="" />
+            <img key={i} className='min-w-[22vh] h-[30vh] object-cover ' src={`https://image.tmdb.org/t/p/original/${ data.poster_path  }`} alt="" />
             <h1 className='text-xl text-zinc-300 mt-3 font-semibold'>
                 {data.name || data.original_title || data.title || data.original_name } 
             </h1>
